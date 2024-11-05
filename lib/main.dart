@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       title: 'Hasib',
       theme: ThemeData.light(useMaterial3: true).copyWith(
         scaffoldBackgroundColor: Pallete.whiteColor,
-        appBarTheme: AppBarTheme(backgroundColor: Pallete.whiteColor)
+        appBarTheme: AppBarTheme(backgroundColor: Pallete.whiteColor),
       ),
       home: Homepage(),
     );
