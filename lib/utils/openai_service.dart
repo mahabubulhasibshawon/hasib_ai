@@ -1,10 +1,9 @@
 import 'dart:convert';
 
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:hasib_ai/utils/secrets.dart';
 
 import 'package:http/http.dart' as http;
-
+String openAIAPIKey = dotenv.env['openAIAPIKey']!;
 class OpenAIService{
   Future<String> isArtPromptAPI(String prompt) async{
     try {
@@ -12,7 +11,7 @@ class OpenAIService{
         Uri.parse('https://api.openai.com/v1/chat/completions'),
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': 'Bearer $openAIAPIKEY}',
+          'Authorization': 'Bearer $openAIAPIKey',
 
         },
         body: jsonEncode({
